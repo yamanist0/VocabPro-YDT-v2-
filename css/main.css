@@ -1,0 +1,42 @@
+body { font-family: 'Inter', system_ui, sans-serif; }
+.font-display { font-family: 'Poppins', system_ui, sans-serif; }
+.word-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.word-card:hover { transform: translateY(-4px); }
+.flashcard { perspective: 1000px; height: 340px; }
+.flashcard-inner { transition: transform 0.6s; transform-style: preserve-3d; }
+.flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+.flashcard-front, .flashcard-back { backface-visibility: hidden; }
+.flashcard-back { transform: rotateY(180deg); }
+.nav-active { background-color: #c8102e; color: white; border-radius: 9999px; }
+.section { display: none; }
+.section.active { display: block; }
+.level-badge { font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 9999px; font-weight: 600; }
+.level-b1 { background-color: #dbeafe; color: #1e40af; }
+.level-b2 { background-color: #dbeafe; color: #1e40af; }
+.level-c1 { background-color: #fef3c7; color: #92400e; }
+.level-c2 { background-color: #fce7f3; color: #9d174d; }
+.true-false-btn { transition: all 0.2s ease; }
+.true-false-btn:active { transform: scale(0.95); }
+
+/* Animasyonlar */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-1deg); }
+  50% { transform: translateX(5px) rotate(1deg); }
+  75% { transform: translateX(-5px) rotate(-1deg); }
+}
+.shake { animation: shake 0.4s ease-in-out; }
+
+@keyframes flash-green {
+  0% { box-shadow: 0 0 0px rgba(16, 185, 129, 0); }
+  50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.8); border-color: #10b981; }
+  100% { box-shadow: 0 0 0px rgba(16, 185, 129, 0); }
+}
+@keyframes flash-red {
+  0% { box-shadow: 0 0 0px rgba(225, 29, 72, 0); }
+  50% { box-shadow: 0 0 20px rgba(225, 29, 72, 0.8); border-color: #e11d48; }
+  100% { box-shadow: 0 0 0px rgba(225, 29, 72, 0); }
+}
+
+.flash-green { animation: flash-green 0.5s ease-out; }
+.flash-red { animation: flash-red 0.5s ease-out; }

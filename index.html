@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YDT İleri Seviye Kelime • Tam Sürüm</title>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+    <!-- Top Bar -->
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 bg-[#c8102e] rounded-2xl flex items-center justify-center">
+                    <span class="text-white text-3xl font-black">Y</span>
+                </div>
+                <div>
+                    <span class="font-display text-2xl font-semibold tracking-tighter">YDT</span>
+                    <span class="font-display text-2xl font-semibold tracking-tighter text-[#c8102e]">Kelime</span>
+                </div>
+            </div>
+            <div class="text-xs px-4 py-1.5 bg-zinc-100 rounded-2xl font-medium flex items-center gap-x-2">
+                <i class="fa-solid fa-book text-[#c8102e]"></i>
+                <span>15 Deneme • B1+</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-screen-xl mx-auto px-6 pt-8 pb-16">
+        
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-y-4 mb-8">
+            <div>
+                <h1 class="font-display text-5xl font-semibold tracking-tighter">YDT İleri Seviye Kelime</h1>
+                <p class="text-xl text-zinc-600 mt-1">Tüm B1+ kelimeler • Profesyonel Yapı</p>
+            </div>
+            <div class="flex gap-x-3">
+                <button onclick="showSection('truefalse')" class="px-6 py-3 bg-[#c8102e] hover:bg-[#a50e26] text-white rounded-3xl font-semibold flex items-center gap-x-2">
+                    <i class="fa-solid fa-check-double"></i>
+                    <span>Doğru / Yanlış Testi</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white border rounded-3xl p-5">
+                <div class="text-sm text-zinc-500">Toplam Kelime</div>
+                <div class="text-4xl font-semibold mt-1" id="total-words">...</div>
+            </div>
+            <div class="bg-white border rounded-3xl p-5">
+                <div class="text-sm text-zinc-500">C1 / C2</div>
+                <div class="text-4xl font-semibold mt-1 text-amber-600" id="c1-c2">...</div>
+            </div>
+            <div class="bg-white border rounded-3xl p-5">
+                <div class="text-sm text-zinc-500">Öğrenilen</div>
+                <div class="text-4xl font-semibold mt-1 text-emerald-600" id="learned-words">0</div>
+            </div>
+            <div class="bg-white border rounded-3xl p-5">
+                <div class="text-sm text-zinc-500">Quiz Ortalaması</div>
+                <div class="text-4xl font-semibold mt-1" id="quiz-avg">—</div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="flex flex-wrap gap-2 mb-6 border-b pb-2">
+            <button onclick="showSection('vocab')" id="tab-vocab" class="nav-tab px-5 py-2 text-sm font-semibold rounded-2xl nav-active">Kelime Havuzu</button>
+            <button onclick="showSection('flashcards')" id="tab-flashcards" class="nav-tab px-5 py-2 text-sm font-semibold rounded-2xl">Flashcard</button>
+            <button onclick="showSection('truefalse')" id="tab-truefalse" class="nav-tab px-5 py-2 text-sm font-semibold rounded-2xl">Doğru / Yanlış</button>
+            <button onclick="showSection('quiz')" id="tab-quiz" class="nav-tab px-5 py-2 text-sm font-semibold rounded-2xl">Quiz Merkezi</button>
+            <button onclick="showSection('progress')" id="tab-progress" class="nav-tab px-5 py-2 text-sm font-semibold rounded-2xl">İlerlemem</button>
+        </div>
+
+        <!-- KELİME HAVUZU -->
+        <div id="section-vocab" class="section active">
+            <div class="flex flex-col md:flex-row gap-4 mb-6">
+                <div class="flex-1 relative">
+                    <i class="fa-solid fa-search absolute left-5 top-4 text-zinc-400"></i>
+                    <input id="search-input" onkeyup="filterVocab()" placeholder="Kelime veya Türkçe ara..." class="w-full pl-12 py-3.5 border rounded-3xl text-base">
+                </div>
+                <select id="level-filter" onchange="filterVocab()" class="px-5 py-3.5 border rounded-3xl">
+                    <option value="">Tüm Seviyeler</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="C1">C1</option>
+                    <option value="C2">C2</option>
+                </select>
+            </div>
+            <div id="vocab-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+        </div>
+
+        <!-- FLASHCARD -->
+        <div id="section-flashcards" class="section">
+            <div class="max-w-lg mx-auto">
+                <div class="flex justify-between mb-4 px-1">
+                    <span id="flashcard-counter" class="font-semibold"></span>
+                    <div class="flex gap-x-2">
+                        <button onclick="prevFlashcard()" class="w-10 h-10 border rounded-2xl"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button onclick="nextFlashcard()" class="w-10 h-10 border rounded-2xl"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div onclick="flipFlashcard()" class="flashcard cursor-pointer mx-auto w-full max-w-md" id="flashcard">
+                    <div class="flashcard-inner bg-white border rounded-3xl p-8 flex flex-col justify-center modern-shadow">
+                        <div class="flashcard-front text-center">
+                            <div id="flashcard-word" class="text-5xl font-semibold tracking-tighter mb-3"></div>
+                            <div id="flashcard-pos" class="text-sm px-4 py-1 bg-zinc-100 rounded-2xl inline-block"></div>
+                        </div>
+                        <div class="flashcard-back p-1">
+                            <div id="flashcard-definition" class="text-xl leading-tight font-medium mb-4"></div>
+                            <div class="text-emerald-700 bg-emerald-50 px-4 py-3 rounded-2xl mb-4">
+                                <span class="font-semibold">Türkçe:</span> <span id="flashcard-turkish"></span>
+                            </div>
+                            <div class="text-xs italic text-zinc-600" id="flashcard-example"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-x-3 mt-6">
+                    <button onclick="markAsKnown(true)" class="flex-1 py-4 bg-emerald-600 text-white rounded-3xl font-semibold">Biliyorum</button>
+                    <button onclick="markAsKnown(false)" class="flex-1 py-4 border rounded-3xl font-semibold">Tekrar Et</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOĞRU / YANLIŞ TESTİ -->
+        <div id="section-truefalse" class="section">
+            <div class="max-w-2xl mx-auto">
+                <div id="tf-start">
+                    <div class="text-center mb-8">
+                        <h3 class="text-3xl font-semibold">Doğru / Yanlış Testi</h3>
+                        <p class="text-zinc-600 mt-2">Türkçe anlamı gör → Doğru mu Yanlış mı?<br>Yanlışlar tekrar sorulacak.</p>
+                    </div>
+                    <button onclick="startTrueFalse()" class="w-full py-4 bg-[#c8102e] text-white text-lg font-semibold rounded-3xl">Teste Başla (12 Soru)</button>
+                </div>
+
+                <div id="tf-active" class="hidden">
+                    <div class="flex justify-between mb-4">
+                        <div>Soru <span id="tf-current">1</span> / <span id="tf-total">12</span></div>
+                        <div>Doğru: <span id="tf-score">0</span></div>
+                    </div>
+                    <div class="bg-white border rounded-3xl p-8 mb-6">
+                        <div class="mb-6">
+                            <div class="text-sm text-zinc-500">KELİME</div>
+                            <div id="tf-word" class="text-4xl font-semibold tracking-tighter"></div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="text-sm text-zinc-500 mb-2">BU ANLAM DOĞRU MU?</div>
+                            <div id="tf-meaning" class="text-2xl font-medium p-6 bg-zinc-50 border rounded-2xl"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button onclick="answerTF(true)" class="true-false-btn py-5 text-xl font-bold bg-emerald-600 text-white rounded-3xl">DOĞRU</button>
+                            <button onclick="answerTF(false)" class="true-false-btn py-5 text-xl font-bold bg-rose-600 text-white rounded-3xl">YANLIŞ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tf-result" class="hidden text-center py-8">
+                    <div class="mx-auto w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-check-double text-4xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-semibold">Test Bitti!</h3>
+                    <div class="text-5xl font-bold mt-3 text-emerald-600" id="tf-final-score"></div>
+                    <div id="tf-review-text" class="mt-4 text-zinc-600"></div>
+                    <div class="mt-8 flex justify-center gap-x-4">
+                        <button onclick="restartTF()" class="px-8 py-3 border rounded-3xl font-semibold">Yeni Test</button>
+                        <button onclick="showSection('progress')" class="px-8 py-3 bg-emerald-600 text-white rounded-3xl font-semibold">İlerlemeye Git</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUIZ MERKEZİ -->
+        <div id="section-quiz" class="section">
+            <div id="quiz-menu" class="max-w-2xl mx-auto text-center">
+                <h3 class="text-3xl font-semibold mb-6">Quiz Merkezi</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div onclick="startQuiz('multiple')" class="cursor-pointer bg-white border p-8 rounded-3xl hover:border-[#c8102e]">
+                        <i class="fa-solid fa-list-check text-4xl text-[#c8102e] mb-4"></i>
+                        <div class="font-semibold">Çoktan Seçmeli</div>
+                    </div>
+                    <div onclick="startQuiz('fill')" class="cursor-pointer bg-white border p-8 rounded-3xl hover:border-[#c8102e]">
+                        <i class="fa-solid fa-edit text-4xl text-[#c8102e] mb-4"></i>
+                        <div class="font-semibold">Boşluk Doldurma</div>
+                    </div>
+                    <div onclick="startQuiz('matching')" class="cursor-pointer bg-white border p-8 rounded-3xl hover:border-[#c8102e]">
+                        <i class="fa-solid fa-link text-4xl text-[#c8102e] mb-4"></i>
+                        <div class="font-semibold">Eşleştirme</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Oynanış Ekranı -->
+            <div id="quiz-active" class="hidden max-w-2xl mx-auto">
+                <div class="flex justify-between mb-4">
+                    <div id="quiz-progress-text" class="font-semibold text-zinc-500">Soru 1 / 10</div>
+                    <button onclick="quitQuiz()" class="text-red-500 font-semibold"><i class="fa-solid fa-times"></i> Çıkış</button>
+                </div>
+                <div id="quiz-content-area" class="bg-white border rounded-3xl p-8 shadow-sm">
+                    <!-- Javascript ile doldurulacak -->
+                </div>
+            </div>
+
+            <!-- Quiz Sonucu Ekranı -->
+            <div id="quiz-result" class="hidden max-w-2xl mx-auto text-center py-8">
+                <div class="mx-auto w-20 h-20 bg-[#c8102e] text-white rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-trophy text-4xl"></i>
+                </div>
+                <h3 class="text-3xl font-semibold">Quiz Tamamlandı!</h3>
+                <div class="text-6xl font-bold mt-4 text-[#c8102e]" id="quiz-final-score"></div>
+                <div class="mt-8 flex justify-center gap-x-4">
+                    <button onclick="quitQuiz()" class="px-8 py-3 border rounded-3xl font-semibold">Quiz Menüsüne Dön</button>
+                    <button onclick="showSection('progress')" class="px-8 py-3 bg-[#c8102e] text-white rounded-3xl font-semibold">İlerlemeyi Gör</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- İLERLEME -->
+        <div id="section-progress" class="section">
+            <div class="max-w-2xl mx-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-semibold">İlerleme Takibi</h3>
+                    <button onclick="resetProgress()" class="px-5 py-2 text-sm bg-white border border-red-200 text-red-600 rounded-2xl flex items-center gap-x-2">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>Sıfırla</span>
+                    </button>
+                </div>
+                <div class="bg-white border rounded-3xl p-8">
+                    <div class="flex justify-between mb-4">
+                        <div>
+                            <div class="text-sm text-zinc-500">Öğrenme Oranı</div>
+                            <div class="text-6xl font-semibold" id="progress-percent">0</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-emerald-600 font-semibold"><span id="progress-learned">0</span> / <span id="progress-total">...</span> kelime</div>
+                        </div>
+                    </div>
+                    <div class="h-3 bg-zinc-100 rounded-full overflow-hidden">
+                        <div id="progress-bar" class="h-3 bg-emerald-600 rounded-full transition-all" style="width:0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>

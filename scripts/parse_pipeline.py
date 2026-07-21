@@ -19,6 +19,7 @@ sys.modules['cgi'] = cgi_mod
 
 from googletrans import Translator
 
+
 def process_pdf(pdf_path="ydt.pdf"):
     print(f"Opening {pdf_path}...")
     reader = pypdf.PdfReader(pdf_path)

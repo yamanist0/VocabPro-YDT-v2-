@@ -247,6 +247,7 @@ function endTF() {
 }
 
 function restartTF() {
+    console.log("Restarting TF, hiding results");
     document.getElementById('tf-result').classList.add('hidden');
     document.getElementById('tf-start').classList.remove('hidden');
 }

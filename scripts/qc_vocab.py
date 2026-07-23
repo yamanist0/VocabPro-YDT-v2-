@@ -37,7 +37,7 @@ def qc_vocab():
         meanings = item.get('turkishMeaning', [])
         mean_str = " ".join(meanings)
         
-        # If it's part of the original manually curated 70, it's mostly safe, but let's check it anyway.
+# first 70 words are probably fine, but we check them all just to be safe
         is_safe = False
         if ex:
             try:

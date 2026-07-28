@@ -21,16 +21,16 @@
   <h3 align="center">VocabPro YDT v2</h3>
 
   <p align="center">
-    YDT sınavına hazırlananlar için gelişmiş bir kelime öğrenme platformu
+    An advanced vocabulary learning platform for the YDT exam
     <br />
-    <a href="https://github.com/yamanist0/VocabPro-YDT-v2-"><strong>Proje Belgeleri »</strong></a>
+    <a href="https://github.com/yamanist0/VocabPro-YDT-v2-"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/">Siteyi Ziyaret Et</a>
+    <a href="https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/">Visit Site</a>
     &middot;
-    <a href="https://github.com/yamanist0/VocabPro-YDT-v2-/issues/new?labels=bug">Hata Bildir</a>
+    <a href="https://github.com/yamanist0/VocabPro-YDT-v2-/issues/new?labels=bug">Report Bug</a>
     &middot;
-    <a href="https://github.com/yamanist0/VocabPro-YDT-v2-/issues/new?labels=enhancement">Öneride Bulun</a>
+    <a href="https://github.com/yamanist0/VocabPro-YDT-v2-/issues/new?labels=enhancement">Request Feature</a>
   </p>
 </div>
 
@@ -67,16 +67,17 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Kelime Havuzu][product-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+[![Product Screenshot][product-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
-VocabPro YDT v2, Yabancı Dil Testi'ne (YDT) hazırlanan öğrenciler için tasarlanmış, interaktif bir kelime öğrenme uygulamasıdır. B1+ seviyesindeki kelimeleri kapsar ve çeşitli öğrenme modülleri sunar.
+VocabPro YDT v2 is an interactive vocabulary teaching app for Yabanc Dil Testi (YDT) which starts with B1+ vocabularies and have numerous modules to improve your learning.
 
-Öne çıkan özellikler:
-* **Kelime Havuzu**: 500+ kelime, seviye filtresi ve detaylı kart görünümü
-* **Flashcard Sistemi**: Çevirerek öğrenme, Biliyorum/Tekrar Et mekaniği
-* **Doğru/Yanlış Testi**: Anlam doğruluğunu hızlıca test etme
-* **Quiz Merkezi**: Çoktan seçmeli, boşluk doldurma ve eşleştirme oyunları
-* **İlerleme Takibi**: Öğrenme oranı, quiz ortalaması ve yerel depolama ile kalıcı veri
+Vocab Pro Features:
+
+* **Vocabulary Pool:** Collection of 500+ YDT based words with filters for all levels with card views for detailed meanings.
+* **Flashcard System:** Simple, clear "Flip to reveal" with "Know" / "Review Later" options.
+* **True/False Test:** One click to quickly test the exact meaning.
+* **Quiz Center:** MCQs, fill-the-blank, and matching exercises to reinforce your understanding.
+* **Progress Tracker:** Real-time data on your learning pace, quiz averages, with always-on, in-your-browser local storage support.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,63 +98,63 @@ VocabPro YDT v2, Yabancı Dil Testi'ne (YDT) hazırlanan öğrenciler için tasa
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Projeyi yerel ortamında çalıştırmak için aşağıdaki adımları takip edin.
+Follow these steps to run the project locally.
 
 ### Prerequisites
 
-Herhangi bir ön koşul gerekmez. Sadece güncel bir web tarayıcısı yeterlidir.
+No prerequisites required — just a modern web browser.
 
 ### Installation
 
-1. Repoyu klonlayın
+1. Clone the repo
    ```sh
    git clone https://github.com/yamanist0/VocabPro-YDT-v2-.git
    ```
-2. Proje dizinine gidin
+2. Navigate to the project directory
    ```sh
    cd VocabPro-YDT-v2-
    ```
-3. `index.html` dosyasını tarayıcınızda açın (çift tıklayarak)
+3. Open `index.html` in your browser (double-click)
    ```
    index.html
    ```
-   Uygulama tamamen istemci taraflıdır, herhangi bir sunucu gerektirmez.
+   The app is fully client-side — no server required.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
-## Kullanım
+## Usage
 
-### Kelime Havuzu
-Tüm kelimeleri seviyelerine göre filtreleyin, arama yapın ve detaylı kartları görüntüleyin.
-[![Kelime Havuzu][kelimehavuzu-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+### Vocabulary Pool
+Filter all words by level, search, and browse flash cards in an online format.
+[![Vocabulary Pool][kelimehavuzu-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
 ### Flashcard
-Kartları çevirerek kelimeleri öğrenin, "Biliyorum" veya "Tekrar Et" ile ilerleyin.
+Cards flip for word learning, mark it "Know" or "Learn later".
 [![Flashcard][flashcard-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
-### Doğru / Yanlış Testi
-Türkçe anlamı görün, doğru mu yanlış mı olduğuna karar verin.
-[![Doğru / Yanlış][dogruyanlis-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+### True / False Test
+Read the meaning of Turkish and check whether it is true or not.
+[![True / False Test][dogruyanlis-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
-### Quiz Merkezi
-Üç farklı quiz türü ile kendinizi test edin.
-[![Quiz Merkezi][quizmerkezi-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+### Quiz Center
+Test yourself with three types of tests.
+[![Quiz Center][quizmerkezi-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
-#### Çoktan Seçmeli
-[![Çoktan Seçmeli][quizcoktansecmeli-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+#### Multiple Choice
+[![Multiple Choice][quizcoktansecmeli-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
-#### Boşluk Doldurma
-[![Boşluk Doldurma][quizboslukdoldurma-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+#### Fill in the Blank
+[![Fill in the Blank][quizboslukdoldurma-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
-#### Eşleştirme
-[![Eşleştirme][quizeslestirme-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+#### Matching
+[![Matching][quizeslestirme-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
-### İlerlemem
-Öğrenme oranınızı ve quiz ortalamanızı takip edin.
-[![İlerlemem][ilerlemem-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+### My Progress
+Track your learning rate and quiz average.
+[![My Progress][ilerlemem-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,14 +163,14 @@ Türkçe anlamı görün, doğru mu yanlış mı olduğuna karar verin.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Kelime Havuzu (filtreleme, arama, detay kartları)
-- [x] Flashcard sistemi (çevirme, bilme/tekrar)
-- [x] Doğru / Yanlış testi
-- [x] Quiz Merkezi (çoktan seçmeli, boşluk doldurma, eşleştirme)
-- [x] İlerleme takibi (yerel depolama)
-- [ ] Sesli okuma (Text-to-Speech)
-- [ ] Karanlık mod
-- [ ] Anki desteği (export)
+- [x] Vocabulary Pool (filter, search, detail cards)
+- [x] Flashcard system (flip, know/review)
+- [x] True / False test
+- [x] Quiz Center (multiple choice, fill-in-the-blank, matching)
+- [x] Progress tracking (localStorage)
+- [ ] Text-to-Speech support
+- [ ] Dark mode
+- [ ] Anki export support
 
 See the [open issues](https://github.com/yamanist0/VocabPro-YDT-v2-/issues) for a full list of proposed features (and known issues).
 
@@ -180,13 +181,13 @@ See the [open issues](https://github.com/yamanist0/VocabPro-YDT-v2-/issues) for 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Katkılar açık kaynak topluluğunu harika bir öğrenme ve üretme ortamı haline getirir. Yapacağınız her katkı **çok değerlidir**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Projeyi forklayın
-2. Kendi özellik dalınızı oluşturun (`git checkout -b feature/YeniOzellik`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik eklendi'`)
-4. Dalınıza push edin (`git push origin feature/YeniOzellik`)
-5. Pull Request açın
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 <a href="https://github.com/yamanist0/VocabPro-YDT-v2-/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=yamanist0/VocabPro-YDT-v2-" alt="contrib.rocks image" />
@@ -212,7 +213,7 @@ GitHub: [@yamanist0](https://github.com/yamanist0)
 
 Project Link: [https://github.com/yamanist0/VocabPro-YDT-v2-](https://github.com/yamanist0/VocabPro-YDT-v2-)
 
-Canlı Site: [https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+Live Site: [https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -261,4 +262,4 @@ Canlı Site: [https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/](https://ydt-ye-
 [Tailwind]: https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
 [Tailwind-url]: https://tailwindcss.com
 [FontAwesome]: https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white
-[FontAwesome-url]: https://fontawesome.com
+[FontAwesome-url]: https://fontawesome.com 

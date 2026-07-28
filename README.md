@@ -1,80 +1,264 @@
+<a id="readme-top"></a>
+
+
+
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![GPLv3 License][license-shield]][license-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
 <div align="center">
-  <img src="icon.ico" width="80" alt="VocabPro YDT Icon" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unsorted_dictionary.svg/1200px-Unsorted_dictionary.svg.png'; this.width=80;" />
-  <h1>VocabPro YDT <small>v2</small></h1>
-  <p><strong>Interactive gamified platform for vocabulary language learning exams.</strong></p>
-  
-  <br>
-  
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Web_Audio_API-8A2BE2.svg?style=for-the-badge&logo=w3c&logoColor=white" alt="Web Audio" />
+  <a href="https://github.com/yamanist0/VocabPro-YDT-v2-">
+    <img src="icon.ico" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">VocabPro YDT v2</h3>
+
+  <p align="center">
+    YDT sınavına hazırlananlar için gelişmiş bir kelime öğrenme platformu
+    <br />
+    <a href="https://github.com/yamanist0/VocabPro-YDT-v2-"><strong>Proje Belgeleri »</strong></a>
+    <br />
+    <br />
+    <a href="https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/">Siteyi Ziyaret Et</a>
+    &middot;
+    <a href="https://github.com/yamanist0/VocabPro-YDT-v2-/issues/new?labels=bug">Hata Bildir</a>
+    &middot;
+    <a href="https://github.com/yamanist0/VocabPro-YDT-v2-/issues/new?labels=enhancement">Öneride Bulun</a>
+  </p>
 </div>
 
----
 
 
-<img width="1827" height="917" alt="image" src="https://github.com/user-attachments/assets/5d01ff89-6884-4c34-8cab-609dfea2de2b" />
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
 
 
----
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-### <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/book-open.svg" width="24" height="24" align="center" /> Overview
-This web application called VocabPro YDT is built with plain Vanilla JavaScript and intended to enable users to build strong English vocabulary for YDT. Withflashcards, various gameified quiz options, sound feedbackand even local persistent learning tracking, it offers a lively user interface.
+[![Kelime Havuzu][product-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
 
----
+VocabPro YDT v2, Yabancı Dil Testi'ne (YDT) hazırlanan öğrenciler için tasarlanmış, interaktif bir kelime öğrenme uygulamasıdır. B1+ seviyesindeki kelimeleri kapsar ve çeşitli öğrenme modülleri sunar.
 
-### <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/sparkles.svg" width="24" height="24" align="center" /> Key Features
+Öne çıkan özellikler:
+* **Kelime Havuzu**: 500+ kelime, seviye filtresi ve detaylı kart görünümü
+* **Flashcard Sistemi**: Çevirerek öğrenme, Biliyorum/Tekrar Et mekaniği
+* **Doğru/Yanlış Testi**: Anlam doğruluğunu hızlıca test etme
+* **Quiz Merkezi**: Çoktan seçmeli, boşluk doldurma ve eşleştirme oyunları
+* **İlerleme Takibi**: Öğrenme oranı, quiz ortalaması ve yerel depolama ile kalıcı veri
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h3><img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/library.svg" width="20" height="20" align="center" /> Interactive Flashcards</h3>
-      Flashcard-like cards for definition, meaning in Turkish, example usage, and part of speech. You can click to "Know / Don't Know" for learning statistics and see in which order should learn them.
-    </td>
-    <td width="50%" valign="top">
-      <h3><img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/gamepad-2.svg" width="20" height="20" align="center" /> Advanced Quiz Engine</h3>
-      Test your knowledge through multiple dynamic modes: <strong>True/False</strong>, <strong>Multiple Choice</strong>, <strong>Fill-in-the-blanks</strong>, and a custom <strong>Matching Game</strong>.
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/volume-2.svg" width="20" height="20" align="center" /> Procedural Audio Feedback</h3>
-      Utilizes the native <code>AudioContext</code> API to generate pure oscillator waveforms (sine for correct, sawtooth for incorrect) for instant, gamified auditory feedback without external audio files.
-    </td>
-    <td width="50%" valign="top">
-      <h3><img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/trending-up.svg" width="20" height="20" align="center" /> Progress Tracking</h3>
-      Uses <code>localStorage</code> to persistently save learned words, calculate completion percentages, and track average quiz scores across sessions.
-    </td>
-  </tr>
-</table>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
----
 
-### <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/folder-tree.svg" width="24" height="24" align="center" /> Project Structure
 
-Based on the repository layout, the project is organized as follows:
+### Built With
 
-```text
-YDT/
-├── assets/             # Images, fonts, and static assets
-├── css/
-│   └── main.css        # Main stylesheet (Tailwind utilities & custom animations)
-├── data/
-│   └── vocabulary.json # Core dataset containing word definitions and levels
-├── docs/               # Project documentation
-├── js/
-│   └── app.js          # Core application logic, quiz engine, and audio generation
-├── scripts/            # Helper scripts for deployment or building
-├── icon.ico            # Application favicon
-├── index.html          # Main application entry point
-├── setup.sh            # Environment setup script
-├── start.bat           # Windows startup script
-└── start.sh            # Unix/Linux startup script
-```
-<br>
-<hr>
-<p align="center">
-  <small>Made with 🤍 by <a href="https://github.com/yamanist0">yamanist</a></small>
-</p>
+* [![HTML5][HTML5]][HTML5-url]
+* [![CSS3][CSS3]][CSS3-url]
+* [![JavaScript][JavaScript]][JavaScript-url]
+* [![Tailwind CSS][Tailwind]][Tailwind-url]
+* [![Font Awesome][FontAwesome]][FontAwesome-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+Projeyi yerel ortamında çalıştırmak için aşağıdaki adımları takip edin.
+
+### Prerequisites
+
+Herhangi bir ön koşul gerekmez. Sadece güncel bir web tarayıcısı yeterlidir.
+
+### Installation
+
+1. Repoyu klonlayın
+   ```sh
+   git clone https://github.com/yamanist0/VocabPro-YDT-v2-.git
+   ```
+2. Proje dizinine gidin
+   ```sh
+   cd VocabPro-YDT-v2-
+   ```
+3. `index.html` dosyasını tarayıcınızda açın (çift tıklayarak)
+   ```
+   index.html
+   ```
+   Uygulama tamamen istemci taraflıdır, herhangi bir sunucu gerektirmez.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Kullanım
+
+### Kelime Havuzu
+Tüm kelimeleri seviyelerine göre filtreleyin, arama yapın ve detaylı kartları görüntüleyin.
+[![Kelime Havuzu][kelimehavuzu-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+
+### Flashcard
+Kartları çevirerek kelimeleri öğrenin, "Biliyorum" veya "Tekrar Et" ile ilerleyin.
+[![Flashcard][flashcard-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+
+### Doğru / Yanlış Testi
+Türkçe anlamı görün, doğru mu yanlış mı olduğuna karar verin.
+[![Doğru / Yanlış][dogruyanlis-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+
+### Quiz Merkezi
+Üç farklı quiz türü ile kendinizi test edin.
+[![Quiz Merkezi][quizmerkezi-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+
+#### Çoktan Seçmeli
+[![Çoktan Seçmeli][quizcoktansecmeli-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+
+#### Boşluk Doldurma
+[![Boşluk Doldurma][quizboslukdoldurma-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+
+#### Eşleştirme
+[![Eşleştirme][quizeslestirme-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+
+### İlerlemem
+Öğrenme oranınızı ve quiz ortalamanızı takip edin.
+[![İlerlemem][ilerlemem-screenshot]](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Kelime Havuzu (filtreleme, arama, detay kartları)
+- [x] Flashcard sistemi (çevirme, bilme/tekrar)
+- [x] Doğru / Yanlış testi
+- [x] Quiz Merkezi (çoktan seçmeli, boşluk doldurma, eşleştirme)
+- [x] İlerleme takibi (yerel depolama)
+- [ ] Sesli okuma (Text-to-Speech)
+- [ ] Karanlık mod
+- [ ] Anki desteği (export)
+
+See the [open issues](https://github.com/yamanist0/VocabPro-YDT-v2-/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Katkılar açık kaynak topluluğunu harika bir öğrenme ve üretme ortamı haline getirir. Yapacağınız her katkı **çok değerlidir**.
+
+1. Projeyi forklayın
+2. Kendi özellik dalınızı oluşturun (`git checkout -b feature/YeniOzellik`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik eklendi'`)
+4. Dalınıza push edin (`git push origin feature/YeniOzellik`)
+5. Pull Request açın
+
+<a href="https://github.com/yamanist0/VocabPro-YDT-v2-/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yamanist0/VocabPro-YDT-v2-" alt="contrib.rocks image" />
+</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the GNU GPLv3 License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+GitHub: [@yamanist0](https://github.com/yamanist0)
+
+Project Link: [https://github.com/yamanist0/VocabPro-YDT-v2-](https://github.com/yamanist0/VocabPro-YDT-v2-)
+
+Canlı Site: [https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/](https://ydt-ye-bir-gun-kaldi-yardim-et.pages.dev/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Tailwind CSS](https://tailwindcss.com)
+* [Font Awesome](https://fontawesome.com)
+* [Cloudflare Pages](https://pages.cloudflare.com)
+* [Img Shields](https://shields.io)
+* [Choose an Open Source License](https://choosealicense.com)
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/yamanist0/VocabPro-YDT-v2-.svg?style=for-the-badge
+[contributors-url]: https://github.com/yamanist0/VocabPro-YDT-v2-/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/yamanist0/VocabPro-YDT-v2-.svg?style=for-the-badge
+[forks-url]: https://github.com/yamanist0/VocabPro-YDT-v2-/network/members
+[stars-shield]: https://img.shields.io/github/stars/yamanist0/VocabPro-YDT-v2-.svg?style=for-the-badge
+[stars-url]: https://github.com/yamanist0/VocabPro-YDT-v2-/stargazers
+[issues-shield]: https://img.shields.io/github/issues/yamanist0/VocabPro-YDT-v2-.svg?style=for-the-badge
+[issues-url]: https://github.com/yamanist0/VocabPro-YDT-v2-/issues
+[license-shield]: https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge
+[license-url]: https://www.gnu.org/licenses/gpl-3.0
+[product-screenshot]: assets/kelimehavuzu.png
+[kelimehavuzu-screenshot]: assets/kelimehavuzu.png
+[flashcard-screenshot]: assets/flashcard.png
+[dogruyanlis-screenshot]: assets/dogruyanlis.png
+[quizmerkezi-screenshot]: assets/quizmerkezi.png
+[quizcoktansecmeli-screenshot]: assets/quiz_coktansecmeli.png
+[quizboslukdoldurma-screenshot]: assets/quiz_boslukdoldurma.png
+[quizeslestirme-screenshot]: assets/quiz_eslestirme.png
+[ilerlemem-screenshot]: assets/ilerlemem.png
+[HTML5]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[HTML5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[CSS3]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[Tailwind]: https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
+[Tailwind-url]: https://tailwindcss.com
+[FontAwesome]: https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white
+[FontAwesome-url]: https://fontawesome.com

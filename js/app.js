@@ -478,6 +478,7 @@ function showSection(sec) {
     document.getElementById('tab-' + sec).classList.add('nav-active');
 
     if (sec === 'flashcards') {
+        console.log('savedIndex:', savedIndex);
         let savedIndex = parseInt(localStorage.getItem('ydt_flashcard_index') || '0');
         if(savedIndex >= vocabulary.length || isNaN(savedIndex)) savedIndex = 0;
         showFlashcard(savedIndex);

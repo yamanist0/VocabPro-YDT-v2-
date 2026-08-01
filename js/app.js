@@ -101,7 +101,7 @@ function filterVocab() {
 let currentModal = null;
 function showModal(word) {
     currentModal = word;
-    const modalHTML = `
+    const modal = `
         <div onclick="this.remove()" class="fixed inset-0 bg-black/60 flex items-center justify-center z-[100] p-6">
             <div onclick="event.stopImmediatePropagation()" class="bg-white w-full max-w-lg rounded-3xl p-8">
                 <div class="flex justify-between">
@@ -125,7 +125,7 @@ function showModal(word) {
                 </div>
             </div>
         </div>`;
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    document.body.insertAdjacentHTML('beforeend', modal);
 }
 
 // ==================== FLASHCARD ====================

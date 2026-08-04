@@ -241,7 +241,7 @@ function endTF() {
         ? `${tfWrongs.length} yanlışın var. İlerleme kaydedildi.` 
         : "Mükemmel! Hiç yanlış yapmadın.";
 
-    // once ogrenilenleri hafizadan yukleyelim
+// once ogrendiklerimizi hafizadan cekelim
     const learned = loadLearned();
     tfWrongs.forEach(item => { if (!learned.includes(item.id)) learned.push(item.id); });
     saveLearned(learned);

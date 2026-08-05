@@ -181,6 +181,7 @@ function startTrueFalse() {
         return;
     }
     tfQuestions = [...vocabulary].sort(() => 0.5 - Math.random()).slice(0, 12);
+    console.log("Selected TF questions:", tfQuestions);
     tfIndex = 0; tfScore = 0; tfWrongs = [];
     document.getElementById('tf-start').classList.add('hidden');
     document.getElementById('tf-active').classList.remove('hidden');

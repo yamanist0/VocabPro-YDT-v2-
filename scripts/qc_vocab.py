@@ -56,7 +56,7 @@ def qc_vocab():
         try:
             det_mean = translator.detect(mean_str)
             if det_mean.lang == 'en':
-                # Re-translate enforcing English to Turkish
+# translate again from english to turkish to fix it
                 res = translator.translate(w, src='en', dest='tr').text.lower()
                 print(f"[{i}/{total}] Fixing translation for {w} (was {mean_str}, now {res})")
                 item['turkishMeaning'] = [res]

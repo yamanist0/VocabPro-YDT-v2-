@@ -2,6 +2,7 @@ import json
 
 
 
+
 def clean():
     with open('data/vocabulary.json', 'r', encoding='utf-8') as f:
         data = json.load(f)

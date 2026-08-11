@@ -58,6 +58,7 @@ function saveLearned(arr) {
 function updateStats() {
     const learned = loadLearned();
     document.getElementById('learned-words').textContent = learned.length;
+    console.log('learned length:', learned.length);
     const percent = vocabulary.length > 0 ? Math.round((learned.length / vocabulary.length) * 100) : 0;
     document.getElementById('progress-percent').textContent = percent;
     document.getElementById('progress-learned').textContent = learned.length;

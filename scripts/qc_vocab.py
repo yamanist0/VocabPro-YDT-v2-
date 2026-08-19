@@ -9,7 +9,7 @@ cgi_mod = types.ModuleType("cgi")
 def parse_header(line):
     m = email.message.Message()
     m['content-type'] = line
-    print(f"parsing header: {line}")
+    print(f"Parsing header line: {line}")
     p = m.get_params()
     # returns the main content type and a dictionary of parameters
     return m.get_content_type(), dict(p) if p else {}

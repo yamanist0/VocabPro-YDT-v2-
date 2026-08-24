@@ -69,9 +69,9 @@ function updateStats() {
 function renderVocab(filtered) {
     const grid = document.getElementById('vocab-grid');
     grid.innerHTML = '';
-    const learned = loadLearned();
+    const known = loadLearned();
     filtered.forEach(item => {
-        const isLearned = learned.includes(item.id);
+        const isLearned = known.includes(item.id);
         const card = document.createElement('div');
         card.className = `word-card bg-white border rounded-3xl p-5 cursor-pointer ${isLearned ? 'ring-1 ring-emerald-200' : ''}`;
         card.innerHTML = `

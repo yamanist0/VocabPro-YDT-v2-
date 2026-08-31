@@ -67,7 +67,7 @@ def qc_vocab():
             
         cleaned.append(item)
         
-    # Reassign IDs sequentially
+# Just resetting the ids so they go in order
     for i, item in enumerate(cleaned):
         item['id'] = i + 1
         

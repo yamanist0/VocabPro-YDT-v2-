@@ -31,6 +31,7 @@ function playSound(isCorrect) {
 
 async function loadData() {
     try {
+        // Get the vocabulary data from the json file
         const response = await fetch('data/vocabulary.json');
         vocabulary = await response.json();
         document.getElementById('total-words').textContent = vocabulary.length;

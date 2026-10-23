@@ -10,7 +10,7 @@ import email.message
 import types
 cgi_mod = types.ModuleType("cgi")
 def parse_header(line):
-    print(f"Parsing header line: {line}")
+print(f"Parsing header: {line}")
     # We make a message object to help us parse the header easily
     m = email.message.Message()
     m['content-type'] = line
